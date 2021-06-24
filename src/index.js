@@ -34,6 +34,7 @@ const createIncompleteList = (text) => {
     const li = document.createElement("li");
     li.innerText = text;
     const backB = document.createElement("button");
+
     backB.addEventListener("click", () => {
       const deleteTarget = backB.parentNode;
       document.getElementById("complete-list").removeChild(deleteTarget);
@@ -41,6 +42,7 @@ const createIncompleteList = (text) => {
       const text = backB.parentNode.firstElementChild.innerText;
       createIncompleteList(text);
     });
+
     backB.innerText = "戻す";
 
     addTarget.appendChild(li);
